@@ -1,18 +1,20 @@
 <?php
-include_once 'Rectangle.php';
-class Rectangle extends Square {
-    public $height;
+include_once 'Shape.php';
+class Square extends Shape{
+    public $width;
 
-    public function __construct($name, $width, $height){
-        parent::__construct($name, $width);
-        $this->height = $height;
+    public function __construct($name, $width){
+        parent::__construct($name);
+        $this->width = $width;
     }
+
     public function calculateArea(){
-        return $this->width * $this->height;
+        return $this->width * $this->width;
     }
 
     public function calculatePerimeter(){
-        return ($this->width + $this->height) * 2;
+        return($this->width + $this->width) * 2;
     }
+
 }
 ?>
